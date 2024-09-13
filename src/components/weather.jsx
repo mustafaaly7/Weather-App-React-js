@@ -21,19 +21,19 @@ return(
       <h2 className="text-2xl mb-4">
         {temp}°C (Feels like: {feels_like}°C)
       </h2>
-      <div className="text-3xl my-2 flex justify-between">
+      <div className="text-xl my-2 flex justify-between">
         <span className="font-semibold">Humidity:</span>
         <span>{main?.humidity}%</span>
       </div>
-      <div className="text-3xl my-2 flex justify-between">
+      <div className="text-xl my-2 flex justify-between">
         <span className="font-semibold">Pressure:</span>
         <span>{main?.pressure} hPa</span>
       </div>
-      <div className="text-3xl my-2 flex justify-between">
+      <div className="text-xl my-2 flex justify-between">
         <span className="font-semibold">Sunrise:</span>
         <span>{new Date(sys?.sunrise * 1000).toLocaleTimeString()}</span>
       </div>
-      <div className="text-3xl my-2 flex justify-between">
+      <div className="text-xl my-2 flex justify-between">
         <span className="font-semibold">Sunset:</span>
         <span>{new Date(sys?.sunset * 1000).toLocaleTimeString()}</span>
       </div>
