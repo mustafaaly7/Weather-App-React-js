@@ -66,15 +66,15 @@ function App() {
 
 
 
-      <h1 className="m-5 mx-auto text-6xl font-mono ">Weather App</h1>
-      <div className=" text-white font-mono card max-w-sm max-h-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <h1 className="text-center text-4xl font-bold my-8">Weather App</h1>
+      <div className="card bg-white border border-gray-300 rounded-lg shadow-md max-w-lg mx-auto p-4">
 
-        <div className="p-5">
-          <h5 className="mb-2 text-4xl font-mono   ">
+        <div className="mb-4 text-center">
+          <h5 className="text-2xl font-semibold mb-2">
             Search Your City
           </h5>
 
-          <select name="cities" className='text-black text-3xl my-4' onChange={(e) => setSelectedCity(e.target.value)} >
+          <select name="cities" className='block w-full p-2 border border-gray-300 rounded-md bg-gray-100' onChange={(e) => setSelectedCity(e.target.value)} >
             {popularCities.map((name, index) => (
               // <option  />
               <option key={index} value={name} className='text-black' >{name}</option>
@@ -87,7 +87,7 @@ function App() {
         </div>
 {loader?(
   
-  <h1 className='text-white text-3xl my-6'>LOADING......</h1>
+  <h1 className='text-xl text-white text-center'>LOADING......</h1>
 ):(
 
 <Weather weatherData={weatherData}/>
