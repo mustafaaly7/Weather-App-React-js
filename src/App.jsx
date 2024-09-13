@@ -67,7 +67,7 @@ function App() {
 
 
       <h1 className="m-5 mx-auto text-6xl font-mono ">Weather App</h1>
-      <div className=" text-white font-mono card max-w-md max-h-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className=" text-white font-mono card max-w-sm max-h-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
         <div className="p-5">
           <h5 className="mb-2 text-4xl font-mono   ">
