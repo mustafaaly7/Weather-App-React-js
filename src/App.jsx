@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
@@ -30,37 +30,43 @@ function App() {
     "Dhaka",         // Bangladesh
     "Chittagong",    // Bangladesh
     "Sylhet"         // Bangladesh
-];
-const [loader,setLoader] = useState(true)
-const[selectedCity,setSelectedCity]=useState(popularCities[0])
+  ];
+  const [loader, setLoader] = useState(true)
+  const [selectedCity, setSelectedCity] = useState(popularCities[0])
+  console.log(selectedCity);
 
 
-
+  useEffect(() => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&appid=1f136667cfcdb418bf8b7a4c5a542f00`)
+      .then((res) => res.json())
+.then((data)=>console.log(data)
+)
+  }, [selectedCity])
 
 
 
   return (
     <>
-    
 
 
 
-<h1 className="m-5 mx-auto text-6xl font-mono ">Weather App</h1>
-            <div className=" font-mono card max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-               
-                <div className="p-5">
-                    
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Noteworthy technology acquisitions 2021
-                        </h5>
-                    
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        Here are the biggest enterprise technology acquisitions of 2021 so far, in
-                        reverse chronological order.
-                    </p>
-                    
-                </div>
-            </div>
+
+      <h1 className="m-5 mx-auto text-6xl font-mono ">Weather App</h1>
+      <div className=" font-mono card max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+
+        <div className="p-5">
+
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Noteworthy technology acquisitions 2021
+          </h5>
+
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Here are the biggest enterprise technology acquisitions of 2021 so far, in
+            reverse chronological order.
+          </p>
+
+        </div>
+      </div>
 
 
 
