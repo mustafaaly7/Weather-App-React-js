@@ -4,6 +4,10 @@
 
 
 .card{
-    background: url('../src/images/download.jpeg');
+    background: url('../src/images/download.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     margin: 0 auto;
+    
 }
