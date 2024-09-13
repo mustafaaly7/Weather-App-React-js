@@ -74,7 +74,7 @@ function App() {
             Search Your City
           </h5>
 
-          <select name="cities" className='text-black' onChange={(e) => setSelectedCity(e.target.value)} >
+          <select name="cities" className='text-black text-3xl my-4' onChange={(e) => setSelectedCity(e.target.value)} >
             {popularCities.map((name, index) => (
               // <option  />
               <option key={index} value={name} className='text-black' >{name}</option>
