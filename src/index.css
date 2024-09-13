@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card{
+    background: url('../src/images/download.jpeg');
+    margin: 0 auto;
+}
